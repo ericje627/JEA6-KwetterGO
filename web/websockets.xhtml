@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>KwetterGO!</title>
+    </h:head>
+    <h:body>
+        <h1>KwetterGO!</h1>
+        <h3>Kwetter anywhere on the go!</h3>
+        <br></br>
+        <h:form>
+            <table width="250px">
+                <tr><td widht="50px"><b>Name:</b></td><td><p:inputText id="name" required="true" value="#{KwetterGO.senderName}" /></td></tr>
+                <tr><td widht="50px"><b>Message:</b></td><td><p:inputText id="message" required="true" value="#{KwetterGO.message}"/></td></tr>
+            </table>
+            
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:commandButton value="Post using GO!" type="submit" action="#{KwetterGO.sendMessage}" />
+                    <p:commandButton type="reset" value="Reset" />
+                </p:toolbarGroup>
+            </p:toolbar>
+            <p:messages />
+        </h:form>
+    </h:body>
+</html>
+
